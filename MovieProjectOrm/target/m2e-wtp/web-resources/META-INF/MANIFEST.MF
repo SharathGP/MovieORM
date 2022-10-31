@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: MovieProjectOrm
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: GAVSLTPBCP
+Implementation-Vendor-Id: com.gavs.movieProject.orm
+Build-Jdk: 1.8.0_171-1-redhat
+Implementation-URL: http://projects.spring.io/spring-boot/MovieProject
+ Orm/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+

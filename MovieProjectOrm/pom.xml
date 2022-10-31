@@ -1,0 +1,97 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.gavs.movieProject.orm</groupId>
+  <artifactId>MovieProjectOrm</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
+  
+  <properties>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+</properties>
+
+
+
+<!-- Add spring core repositories, you don't need this if you are using a .RELEASE version -->
+<repositories>
+    <repository>
+        <id>spring-snapshots</id>
+        <url>http://repo.spring.io/snapshots</url>
+        <snapshots><enabled>true</enabled></snapshots>
+    </repository>
+    <repository>
+        <id>spring-milestones</id>
+        <url>http://repo.spring.io/milestone</url>
+        <snapshots><enabled>true</enabled></snapshots>
+    </repository>
+</repositories>
+
+
+
+<pluginRepositories>
+    <pluginRepository>
+        <id>spring-snapshots</id>
+        <url>http://repo.spring.io/snapshot</url>
+    </pluginRepository>
+    <pluginRepository>
+        <id>spring-milestones</id>
+        <url>http://rep.spring.io/milestone</url>
+    </pluginRepository>
+</pluginRepositories>
+
+
+
+<!-- The below specification,
+            1.configures the defaults required for the Spring Boot project,
+            2.performs version control
+            3.Provides an important maven goal 'clean instal spring-boot:run' to trigger
+              embedded container deployment-->
+              
+<parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>1.5.2.RELEASE</version>
+</parent>
+
+
+
+<!-- The below tag will add dependencies to the project CLASSPATH
+        1. It will enable Spring MVC support, No need of @EnableMVC
+        2. It provides the default embedded web container (Tomcat) -->
+        
+<dependencies>
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-data-jpa</artifactId>
+    </dependency>
+      <dependency>
+        <groupId>mysql</groupId>
+        <artifactId>mysql-connector-java</artifactId>
+    </dependency>
+    
+</dependencies>
+
+
+
+
+<!-- To package as an executable jar -->
+
+
+
+<build>
+    <plugins>
+        <plugin>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-maven-plugin</artifactId>
+        </plugin>
+    </plugins>
+</build>
+
+
+
+  
+</project>
